@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Disable-PageVisibility-API",
   "version": "1.0",
-  "description": "Blocks the Page Visibility API to prevent websites from detecting when you switch tabs, minimize the browser window, or navigate away. This extension intercepts and masks visibility-related events and properties, ensuring websites always perceive your page as active and visible, regardless of your actual browser state.",
+  "description": "Blocks Page Visibility API to prevent websites from detecting tab switching, window minimization, or navigation. Intercepts and masks visibility events, ensuring websites always perceive your page as active and visible.",
 
   "browser_specific_settings": {
     "gecko": {}
