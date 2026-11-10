@@ -6,7 +6,10 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "data_collection_permissions": {}
+      "id": "pvb@timur.dev",
+      "data_collection_permissions": {
+        "required": []
+      }
     }
   },
 
