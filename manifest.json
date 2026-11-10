@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Disable-PageVisibility-API",
+  "version": "1.0",
+  "description": "Blocks the Page Visibility API to prevent websites from detecting when you switch tabs, minimize the browser window, or navigate away. This extension intercepts and masks visibility-related events and properties, ensuring websites always perceive your page as active and visible, regardless of your actual browser state.",
+
+  "browser_specific_settings": {
+    "gecko": {}
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Disable Page Visibility API"
+  },
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["main.js"]
+}

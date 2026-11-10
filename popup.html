@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      min-width: 280px;
+      min-height: 180px;
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: #ffffff;
+    }
+    .domain {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #ffffff;
+      padding: 0 15px;
+      text-align: center;
+      word-break: break-word;
+      max-width: 100%;
+    }
+    .toggle-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #4285f4;
+      cursor: pointer;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    .toggle-btn svg {
+      width: 40px;
+      height: 40px;
+      stroke: #4285f4;
+      stroke-width: 2;
+      fill: none;
+      transition: all 0.3s;
+    }
+    .toggle-btn.on {
+      background: #4285f4;
+    }
+    .toggle-btn.on svg {
+      stroke: #ffffff;
+      fill: #ffffff;
+    }
+    .toggle-btn.off {
+      background: transparent;
+    }
+    .toggle-btn.off svg {
+      stroke: #4285f4;
+      fill: none;
+    }
+    @media (max-width: 350px) {
+      body {
+        min-width: 260px;
+        min-height: 200px;
+        padding: 25px 15px;
+      }
+      .domain {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      .toggle-btn {
+        width: 90px;
+        height: 90px;
+      }
+      .toggle-btn svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    @media (min-width: 600px) {
+      body {
+        min-width: 300px;
+        min-height: 200px;
+      }
+      .domain {
+        font-size: 18px;
+      }
+      .toggle-btn {
+        width: 100px;
+        height: 100px;
+      }
+      .toggle-btn svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="domain" class="domain">Loading...</div>
+  <button id="toggleBtn" class="toggle-btn">
+    <svg viewBox="0 0 24 24">
+      <path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/>
+    </svg>
+  </button>
+  <script src="popup.js"></script>
+</body>
+</html>
